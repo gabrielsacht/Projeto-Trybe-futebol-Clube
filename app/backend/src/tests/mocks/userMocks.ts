@@ -1,5 +1,3 @@
-import IUser from '../../interfaces/IUser';
-
 const validLoginBody =   {
   "email": "admin@admin.com",
   "password": "secret_admin"
