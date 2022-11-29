@@ -28,7 +28,7 @@ export default class AuthService {
       const data = this.jwt.verify(token, process.env.JWT_SECRET as string);
       return data;
     } catch (error) {
-      throw new HttpException(401, 'Invalid token');
+      throw new HttpException(401, 'Token must be a valid token');
     }
   }
 }
