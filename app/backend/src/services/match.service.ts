@@ -21,8 +21,8 @@ export default class MatchService {
     if (inProgress === 'true') param = true;
     const response = await this.matchModel.findAll({
       include: [
-        { model: Team, as: 'teamHome', attributes: { exclude: ['id'] } },
-        { model: Team, as: 'teamAway', attributes: { exclude: ['id'] } }],
+        { model: Team, as: 'teamHome', attributes: ['teamName'] },
+        { model: Team, as: 'teamAway', attributes: ['teamName'] }],
       where: { inProgress: param },
     });
     return response;
