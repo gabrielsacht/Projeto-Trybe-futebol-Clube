@@ -76,7 +76,7 @@ describe('Testes de Login', () => {
       const response = await chai.request(app).get('/login/validate').set('authorization', 'invalidhashtest')
 
       expect(response.status).to.be.equal(401);
-      expect(response.body).to.deep.equal({ message: "Invalid token" })
+      expect(response.body).to.deep.equal({ message: "Token must be a valid token" })
     });
 
   })
