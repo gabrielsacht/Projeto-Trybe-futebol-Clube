@@ -63,5 +63,4 @@ describe('Testes de Leaderboard', () => {
     });
 
   })
-
 })
